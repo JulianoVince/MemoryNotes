@@ -1,7 +1,5 @@
 package com.br.julianovincedecampos.core.data
 
-import com.sun.tools.doclets.internal.toolkit.Content
-
 data class Note(
     var title: String,
     var content: String,

@@ -7,7 +7,11 @@ import com.br.julianovincedecampos.core.data.Note
 
 @Entity(tableName = "note")
 data class NoteEntity(
+
+    @ColumnInfo(name = "title")
     val title: String,
+
+    @ColumnInfo(name = "content")
     val content: String,
 
     @ColumnInfo(name = "creation_date")
@@ -17,6 +21,7 @@ data class NoteEntity(
     val updateTime: Long,
 
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     val id: Long = 0L
 ) {
 

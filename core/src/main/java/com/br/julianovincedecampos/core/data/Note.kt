@@ -1,11 +1,11 @@
 package com.br.julianovincedecampos.core.data
 
-import javax.naming.Context
+import com.sun.tools.doclets.internal.toolkit.Content
 
 data class Note(
     var title: String,
-    var context: Context,
-    var creationTime: String,
+    var content: String,
+    var creationTime: Long,
     var updateTine: Long,
     var id: Long = 0
 )

@@ -1,4 +1,4 @@
-package com.br.julianovincedecampos.memorynotes.framework
+package com.br.julianovincedecampos.memorynotes.framework.db
 
 import com.br.julianovincedecampos.core.usecase.AddNotes
 import com.br.julianovincedecampos.core.usecase.GetAllNotes

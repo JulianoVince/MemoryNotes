@@ -6,12 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.br.julianovincedecampos.core.data.Note
 import com.br.julianovincedecampos.memorynotes.R
+import com.br.julianovincedecampos.memorynotes.framework.ListAction
 import kotlinx.android.synthetic.main.item_note.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class NotesListAdapter(var notes: ArrayList<Note>) :
+class NotesListAdapter(var notes: ArrayList<Note>, val action: ListAction) :
     RecyclerView.Adapter<NotesListAdapter.NoteViewHolder>() {
 
     fun updateNotes(newNotes: List<Note>) {
@@ -43,6 +44,8 @@ class NotesListAdapter(var notes: ArrayList<Note>) :
             val sdf = SimpleDateFormat("MMM dd, HH:mm:ss")
             val resultDate = Date(note.updateTine)
             noteDate.text = "Ultima atualização: ${sdf.format(resultDate)}"
+
+            layout.setOnClickListener { action.onClick(note.id) }
         }
     }
 }

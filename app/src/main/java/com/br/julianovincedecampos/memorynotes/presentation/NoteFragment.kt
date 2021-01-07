@@ -109,6 +109,7 @@ class NoteFragment : Fragment() {
                             )
                         }
                         .setNegativeButton("Cancelar") { dialogInterface, i -> }
+                        .show()
                 }
             }
         }
